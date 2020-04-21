@@ -6,6 +6,7 @@ import javax.persistence.Id;
 @Entity
 public class Location {
 	
+	//entity class
 	@Id
 	private int id;
 	private String code;
