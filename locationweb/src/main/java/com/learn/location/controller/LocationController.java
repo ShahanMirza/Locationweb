@@ -20,8 +20,8 @@ public class LocationController {
 
 	@Autowired
 	LocationService locationService;
-	@Autowired
-	EmailUtilImpl emiailUtil;
+//	@Autowired(required=true)
+//	EmailUtilImpl emiailUtil;
 	
 	@RequestMapping("/showCreate")
 	public String showCreate()
@@ -35,7 +35,7 @@ public class LocationController {
 		Location locationSaved 	=locationService.saveLocation(location);
 		String msg="Location saved with id:"+locationSaved.getId();
 		modelMap.addAttribute("msg", msg);
-		emiailUtil.sendEmail("ramzan.ali408055@gmail.com", "test", "testing testing");
+//		emiailUtil.sendEmail("ramzan.ali408055@gmail.com", "test", "testing testing");
 		return "createLocation";
 	}
 	
